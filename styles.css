@@ -1,6 +1,6 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Arial', sans-serif;
+  background-color: #ececec;
   margin: 0;
   display: flex;
   align-items: center;
@@ -17,10 +17,13 @@ body {
 }
 
 .room {
-  margin-top: 20px;
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
 }
 
-#lightStatus1, #lightStatus2 {
+#lightStatus1, #lightStatus2, #lightStatus3, #lightStatus4, #lightStatus5 {
   margin-top: 10px;
   font-weight: bold;
 }
@@ -30,4 +33,20 @@ button {
   padding: 10px 20px;
   cursor: pointer;
   font-size: 16px;
+}
+
+/* Dizainas pagal išplanavimo planą */
+#room1 { grid-area: room1; }
+#room2 { grid-area: room2; }
+#room3 { grid-area: room3; }
+#room4 { grid-area: room4; }
+#room5 { grid-area: room5; }
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "room1 room2"
+    "room3 room4"
+    "room5 room5";
+  grid-gap: 20px;
 }
